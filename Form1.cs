@@ -33,7 +33,8 @@ namespace AuthorsTableInputForm_MessageBox_
         {
             //connect to the books database
             string fullfile = Path.GetFullPath("SQLBooksDB");
-            booksConnection = new SqlConnection("Data Source=.\\SQLEXPRESS01; AttachDbFilename=" + fullfile + ";Integrated Security=True; Connect Timeout=30; User Instance=True");
+            booksConnection = new SqlConnection("Data Source=.\\SQLEXPRESS; AttachDbFilename=" + fullfile + ";Integrated Security=True; Connect Timeout=30; User Instance=True");
+            booksConnection.Open();
 
             //This tested to see if the connection worked
             //MessageBox.Show("the connection was successfull");
